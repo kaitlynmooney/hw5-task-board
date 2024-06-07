@@ -25,6 +25,36 @@
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
     <!-- Todo: Create a modal with a form to add tasks -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Task Title</label>
+            <input type="text" class="form-control" id="task-name-input">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Task Due Date</label>
+            <input type="text" class="form-control" id="taskDueDate">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Task Description</label>
+            <textarea class="form-control" id="task-content-input"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Add Task</button>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
@@ -66,7 +96,16 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
+    <script>
+        $( function() {
+          $( "#done-cards" ).draggable();
+        } );
+        </script>
+         <script>
+            $( function() {
+              $( "#taskDueDate" ).datepicker();
+            } );
+        </script>
   <script src="./assets/js/script.js"></script>
 </body>
 
