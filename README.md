@@ -7,8 +7,8 @@ This project was created in order to help people better organize their tasks and
 ## Usage
 
 To use my application, click on the green "Add Task" button and input your information. Click save and move your task around based on your progress.
-
-    ![deployment screenshot](assets/images/hw5-task-board-screenshot.png)
+    md  
+    ![deployment screenshot](Develop/assets/images/hw5-task-board-screenshot.png)
    
 
 ## Credits
